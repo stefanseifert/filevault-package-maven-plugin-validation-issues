@@ -20,6 +20,7 @@
             dc:format="image/jpeg"
             dc:title="Chicago"
             jcr:primaryType="nt:unstructured"
+            jcr:title="Chicago"
             tiff:ImageLength="{Long}1280"
             tiff:ImageWidth="{Long}1920">
             <Iptc4xmpCore:CreatorContactInfo jcr:primaryType="nt:unstructured"/>
