@@ -1,0 +1,65 @@
+# Project-specific AEM configuration
+
+# Inherit default AEM functionality from "AEM Definitions", see http://devops.wcm.io/conga/definitions/aem/
+inherits:
+- role: aem-cms
+
+variants:
+- variant: aem-author
+- variant: aem-publish
+
+templateDir: filevaultsample-aem-cms
+
+files:
+
+
+# AEM Core WCM components
+- url: mvn:com.adobe.cq/core.wcm.components.all//zip
+  dir: packages
+
+# AEM OSGi System Configuration
+- file: filevaultsample-aem-cms-config.provisioning
+  dir: packages
+  template: filevaultsample-aem-cms-config.provisioning.hbs
+  postProcessors:
+  - aem-contentpackage-osgiconfig
+  postProcessorOptions:
+    contentPackage:
+      name: filevaultsample-aem-cms-config
+      rootPath: /apps/filevaultsample/config
+      filters:
+      - filter: /apps/filevaultsample
+        rules:
+        - rule: include
+          pattern: /apps/filevaultsample/config(\..*)?
+        - rule: exclude
+          pattern: /apps/filevaultsample/config/rewriter
+
+# Application package
+- url: mvn:sample.filevault/filevaultsample.complete//zip
+  dir: packages
+
+# Application conf content package
+- url: mvn:sample.filevault/filevaultsample.conf-content//zip
+  dir: packages
+  condition: ${app.confContent}
+
+# Application sample content package
+- url: mvn:sample.filevault/filevaultsample.sample-content//zip
+  dir: packages
+  condition: ${app.sampleContent}
+
+
+# Defines configuration parameters and default values
+config:
+  contentPackage:
+    group: filevaultsample
+    version: ${version}
+
+  app:
+    confContent: true
+    sampleContent: false
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: warn
