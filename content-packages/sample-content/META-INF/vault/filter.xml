@@ -5,4 +5,5 @@
         <exclude pattern="^.*/jcr:content/folderThumbnail(/.*)?$"/>
     </filter>
     <filter root="/content/filevaultsample"/>
+    <filter root="/content/cq:tags/sample"/>
 </workspaceFilter>
