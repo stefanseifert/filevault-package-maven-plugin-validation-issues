@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>sample.filevault</groupId>
-    <artifactId>filevaultsample.parent</artifactId>
+    <artifactId>sample.filevault.filevaultsample.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>sample.filevault</groupId>
-  <artifactId>filevaultsample.complete</artifactId>
+  <artifactId>sample.filevault.filevaultsample.complete</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>content-package</packaging>
 
-  <name>filevaultsample Application</name>
+  <name>filevaultsample Package complete</name>
   <description>AEM content package with all application bundles and dependencies.</description>
 
   <properties>
@@ -26,42 +26,49 @@
 
     <dependency>
       <groupId>sample.filevault</groupId>
-      <artifactId>filevaultsample.core</artifactId>
+      <artifactId>sample.filevault.filevaultsample.core</artifactId>
       <version>1.0.0-SNAPSHOT</version>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>sample.filevault</groupId>
-      <artifactId>filevaultsample.ui.apps</artifactId>
+      <artifactId>sample.filevault.filevaultsample.apps-repository-structure</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <type>zip</type>
-      <scope>compile</scope>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>sample.filevault</groupId>
+      <artifactId>sample.filevault.filevaultsample.ui.apps</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>zip</type>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.caconfig.api</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.caconfig.spi</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.caconfig.impl</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.extensions</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.editor</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
 
   </dependencies>
@@ -108,15 +115,19 @@
               </artifactId>
               <type>jar</type>
             </embedded>
+            <embedded>
+              <groupId>sample.filevault</groupId>
+              <artifactId>sample.filevault.filevaultsample.ui.apps</artifactId>
+              <type>zip</type>
+            </embedded>
           </embeddeds>
 
-          <subPackages>
-            <subPackage>
+          <repositoryStructurePackages>
+            <repositoryStructurePackage>
               <groupId>sample.filevault</groupId>
-              <artifactId>filevaultsample.ui.apps</artifactId>
-              <filter>true</filter>
-            </subPackage>
-          </subPackages>
+              <artifactId>sample.filevault.filevaultsample.apps-repository-structure</artifactId>
+            </repositoryStructurePackage>
+          </repositoryStructurePackages>
 
         </configuration>
       </plugin>
@@ -130,16 +141,17 @@
         </configuration>
       </plugin>
 
-      <!-- Do not deploy sources to repository -->
+      <!-- Do not generate sources JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <configuration>
-          <attach>false</attach>
+          <skipSource>true</skipSource>
         </configuration>
       </plugin>
 
     </plugins>
 
   </build>
+
 </project>

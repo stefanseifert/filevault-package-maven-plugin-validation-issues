@@ -5,5 +5,11 @@
         <exclude pattern="^.*/jcr:content/folderThumbnail(/.*)?$"/>
     </filter>
     <filter root="/content/filevaultsample"/>
+    <filter root="/content/experience-fragments/filevaultsample"/>
     <filter root="/content/cq:tags/sample"/>
+    <filter root="/conf/filevaultsample">
+        <include pattern="/conf/filevaultsample/.*"/>
+        <exclude pattern="/conf/filevaultsample/rep:policy(/.*)?"/>
+        <exclude pattern="/conf/filevaultsample/settings/wcm(/.*)?"/>
+    </filter>
 </workspaceFilter>

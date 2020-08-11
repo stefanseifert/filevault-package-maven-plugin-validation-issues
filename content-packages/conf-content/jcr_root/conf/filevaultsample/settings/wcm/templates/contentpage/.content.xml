@@ -7,5 +7,8 @@
         jcr:title="filevaultsample Content"
         allowedPaths="^/content/filevaultsample/.+$"
         ranking="{Long}10"
-        status="enabled"/>
+        status="enabled"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        cq:lastReplicated="{Date}2020-08-11T00:00:00.000+02:00"
+        cq:lastReplicationAction="Activate"/>
 </jcr:root>

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>sample.filevault</groupId>
-    <artifactId>filevaultsample.parent</artifactId>
+    <artifactId>sample.filevault.filevaultsample.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>sample.filevault</groupId>
-  <artifactId>filevaultsample.sample-content</artifactId>
+  <artifactId>sample.filevault.filevaultsample.sample-content</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>content-package</packaging>
 
+  <name>filevaultsample Package sample-content</name>
   <description>AEM Application sample content</description>
 
   <properties>
@@ -50,12 +51,12 @@
         </configuration>
       </plugin>
 
-      <!-- Do not deploy sources to repository -->
+      <!-- Do not generate sources JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <configuration>
-          <attach>false</attach>
+          <skipSource>true</skipSource>
         </configuration>
       </plugin>
 

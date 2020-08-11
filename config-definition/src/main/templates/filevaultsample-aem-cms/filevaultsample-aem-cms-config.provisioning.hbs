@@ -11,13 +11,14 @@
     org.apache.sling.commons.log.file.size="'.'yyyy-MM-dd"
     org.apache.sling.commons.log.file.number=I"7"
     org.apache.sling.commons.log.numOfLines=I"10000"
+    org.apache.sling.commons.log.packagingDataEnabled=B"true"
 
   # Set loglevel for project-specific bundles
   org.apache.sling.commons.log.LogManager.factory.config-filevaultsample
     org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
     org.apache.sling.commons.log.file="logs/error.log"
-    org.apache.sling.commons.log.level="{{log.projectSpecificLogLevel}}"
-    org.apache.sling.commons.log.names=["io.wcm","sample.filevault"]    
+    org.apache.sling.commons.log.level="{{app.logLevel}}"
+    org.apache.sling.commons.log.names=["io.wcm","sample.filevault"]
 
   # Disable built-in AEM link checker by default (enable it only when configured properly).
   com.day.cq.rewriter.linkchecker.impl.LinkCheckerTransformerFactory
@@ -27,7 +28,7 @@
   org.apache.sling.caconfig.management.impl.ConfigurationManagementSettingsImpl
     ignorePropertyNameRegex=["^(jcr|cq):.+$","^sling:resourceType$"]
     configCollectionPropertiesResourceNames=["jcr:content","."]
-  
+
   # Context path strategy
   io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-filevaultsample
     templatePaths=["/conf/filevaultsample/settings/wcm/templates/homepage"]
@@ -63,3 +64,9 @@
     index.files=["index","index.html"]
     aliases="xml:pdf"
     json.maximumresults=I"100"
+
+
+[:repoinit]
+# Create root folder below /apps for application
+create path /apps/filevaultsample(sling:Folder)
+

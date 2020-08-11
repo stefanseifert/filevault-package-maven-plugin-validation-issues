@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>sample.filevault</groupId>
-    <artifactId>filevaultsample.parent</artifactId>
+    <artifactId>sample.filevault.filevaultsample.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>sample.filevault</groupId>
-  <artifactId>filevaultsample.conf-content</artifactId>
+  <artifactId>sample.filevault.filevaultsample.conf-content</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>content-package</packaging>
 
+  <name>filevaultsample Package conf-content</name>
   <description>AEM Application conf content</description>
 
   <properties>
@@ -42,6 +43,24 @@
         </configuration>
       </plugin>
 
+      <plugin>
+        <groupId>io.wcm.maven.plugins</groupId>
+        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+        <configuration>
+          <!--
+            Set replication status for all cq:Page and cq:Template nodes to "Activated"
+            It is assumed that this package is deployed always on author and publish instances, thus
+            it's not required to activate template definitions manually after each deployment.
+            If this is not case, remove this configuration.
+          -->
+          <markReplicationActivated>true</markReplicationActivated>
+          <markReplicationActivatedIncludeNodes>
+            <path>^/conf/.+/settings/wcm/policies/.+/jcr:content$</path>
+            <path>^/conf/.+/settings/wcm/templates/[^/]+(/policies|/structure)?/jcr:content$</path>
+          </markReplicationActivatedIncludeNodes>
+        </configuration>
+      </plugin>
+
       <!-- Do not generate eclipse project files -->
       <plugin>
         <groupId>io.wcm.devops.maven.plugins</groupId>
@@ -51,12 +70,12 @@
         </configuration>
       </plugin>
 
-      <!-- Do not deploy sources to repository -->
+      <!-- Do not generate sources JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <configuration>
-          <attach>false</attach>
+          <skipSource>true</skipSource>
         </configuration>
       </plugin>
 

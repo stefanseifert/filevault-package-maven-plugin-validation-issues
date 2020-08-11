@@ -31,21 +31,21 @@ files:
       - filter: /apps/filevaultsample
         rules:
         - rule: include
-          pattern: /apps/filevaultsample/config(\..*)?
+          pattern: /apps/filevaultsample/config(\..*)?(/.*)?
         - rule: exclude
-          pattern: /apps/filevaultsample/config/rewriter
+          pattern: /apps/filevaultsample/config/rewriter(/.*)?
 
 # Application package
-- url: mvn:sample.filevault/filevaultsample.complete//zip
+- url: mvn:sample.filevault/sample.filevault.filevaultsample.complete//zip
   dir: packages
 
 # Application conf content package
-- url: mvn:sample.filevault/filevaultsample.conf-content//zip
+- url: mvn:sample.filevault/sample.filevault.filevaultsample.conf-content//zip
   dir: packages
   condition: ${app.confContent}
 
 # Application sample content package
-- url: mvn:sample.filevault/filevaultsample.sample-content//zip
+- url: mvn:sample.filevault/sample.filevault.filevaultsample.sample-content//zip
   dir: packages
   condition: ${app.sampleContent}
 

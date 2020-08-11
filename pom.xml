@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>sample.filevault</groupId>
-    <artifactId>filevaultsample.parent</artifactId>
+    <artifactId>sample.filevault.filevaultsample.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>parent/pom.xml</relativePath>
   </parent>
 
   <groupId>sample.filevault</groupId>
-  <artifactId>filevaultsample</artifactId>
+  <artifactId>sample.filevault.filevaultsample</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+
+  <name>filevaultsample</name>
 
   <build>
     <plugins>
@@ -33,6 +35,7 @@
     <module>bundles/core</module>
     <module>content-packages/ui.apps</module>
     <module>content-packages/complete</module>
+    <module>content-packages/apps-repository-structure</module>
     <module>content-packages/conf-content</module>
     <module>content-packages/sample-content</module>
     <module>config-definition</module>

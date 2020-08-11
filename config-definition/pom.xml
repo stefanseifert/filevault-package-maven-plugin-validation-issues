@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>sample.filevault</groupId>
-    <artifactId>filevaultsample.parent</artifactId>
+    <artifactId>sample.filevault.filevaultsample.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>sample.filevault</groupId>
-  <artifactId>filevaultsample.config-definition</artifactId>
+  <artifactId>sample.filevault.filevaultsample.config-definition</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>config-definition</packaging>
 
-  <description>AEM Application CONGA roles and templates</description>
+  <name>filevaultsample config-definition</name>
+  <description>CONGA roles and template definitions</description>
 
   <dependencies>
 
@@ -28,21 +29,21 @@
     <!-- Application packages -->
     <dependency>
       <groupId>sample.filevault</groupId>
-      <artifactId>filevaultsample.complete</artifactId>
+      <artifactId>sample.filevault.filevaultsample.complete</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>sample.filevault</groupId>
-      <artifactId>filevaultsample.conf-content</artifactId>
+      <artifactId>sample.filevault.filevaultsample.conf-content</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>sample.filevault</groupId>
-      <artifactId>filevaultsample.sample-content</artifactId>
+      <artifactId>sample.filevault.filevaultsample.sample-content</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <type>zip</type>
       <scope>compile</scope>
@@ -67,7 +68,7 @@
         <artifactId>conga-maven-plugin</artifactId>
         <executions>
 
-          <!-- Generate configuration for local development AEM instance -->
+          <!-- Generate configuration for environments defined in this application code repository -->
           <execution>
             <id>dev-environment-config</id>
             <phase>generate-resources</phase>

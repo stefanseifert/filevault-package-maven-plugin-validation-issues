@@ -2,7 +2,7 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[filevaultsample.all]"
-    embed="[core.wcm.components.image.v2,filevaultsample.3rdparty,filevaultsample.app]"
+    embed="[core.wcm.components.commons.datalayer.v1,core.wcm.components.commons.site.container,core.wcm.components.image.v2,core.wcm.components.carousel.v1,core.wcm.components.tabs.v1,core.wcm.components.accordion.v1,filevaultsample.3rdparty,filevaultsample.app]"
     jsProcessor="[default:none,min:gcc;compilationLevel=whitespace]"
     longCacheKey="${project.version}-${buildNumber}"
     allowProxy="{Boolean}true"/>
