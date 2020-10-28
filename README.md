@@ -32,7 +32,7 @@ You can deploy individual bundles or content packages to the local AEM instances
 ### System requirements
 
 * JDK 1.8
-* Apache Maven 3.5.2 or higher
+* Apache Maven 3.6.0 or higher
 * AEM 6.5 author instance running on port 4502
 * Optional: AEM 6.5 publish instance running on port 4503
 * Include the [Adobe Public Maven Repository][adobe-public-maven-repo] in your maven settings, see [wcm.io Maven Repositories][wcmio-maven] for details.

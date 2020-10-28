@@ -7,7 +7,7 @@
         jcr:primaryType="cq:PageContent"
         sling:resourceType="filevaultsample/core/components/global/page"
         jcr:mixinTypes="[cq:ReplicationStatus]"
-        cq:lastReplicated="{Date}2020-08-11T00:00:00.000+02:00"
+        cq:lastReplicated="{Date}2020-10-28T00:00:00.000+01:00"
         cq:lastReplicationAction="Activate">
         <root
             jcr:primaryType="nt:unstructured"

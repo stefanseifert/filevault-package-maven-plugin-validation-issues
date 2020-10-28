@@ -12,11 +12,13 @@
                             jcr:primaryType="nt:unstructured"
                             jcr:title="Content Container"
                             sling:resourceType="wcm/core/components/policy/policy"
-                            components="[group:filevaultsample Container,group:filevaultsample Content]">
+                            components="[group:filevaultsample Container,group:filevaultsample Content]"
+                            layout="responsiveGrid"
+                            layoutDisabled="false">
                             <jcr:content
                                 jcr:primaryType="nt:unstructured"
                                 jcr:mixinTypes="[cq:ReplicationStatus]"
-                                cq:lastReplicated="{Date}2020-08-11T00:00:00.000+02:00"
+                                cq:lastReplicated="{Date}2020-10-28T00:00:00.000+01:00"
                                 cq:lastReplicationAction="Activate"/>
                             <cq:authoring jcr:primaryType="nt:unstructured">
                                 <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -46,7 +48,7 @@
                         <jcr:content
                             jcr:primaryType="nt:unstructured"
                             jcr:mixinTypes="[cq:ReplicationStatus]"
-                            cq:lastReplicated="{Date}2020-08-11T00:00:00.000+02:00"
+                            cq:lastReplicated="{Date}2020-10-28T00:00:00.000+01:00"
                             cq:lastReplicationAction="Activate"/>
                     </root-container>
                     <experience-fragment
@@ -57,7 +59,7 @@
                         <jcr:content
                             jcr:primaryType="nt:unstructured"
                             jcr:mixinTypes="[cq:ReplicationStatus]"
-                            cq:lastReplicated="{Date}2020-08-11T00:00:00.000+02:00"
+                            cq:lastReplicated="{Date}2020-10-28T00:00:00.000+01:00"
                             cq:lastReplicationAction="Activate"/>
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">

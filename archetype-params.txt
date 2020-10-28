@@ -1,7 +1,7 @@
 mvn archetype:generate -DinteractiveMode=false \
   -DarchetypeGroupId=io.wcm.maven.archetypes \
   -DarchetypeArtifactId=io.wcm.maven.archetypes.aem \
-  -DarchetypeVersion=3.2.0 \
+  -DarchetypeVersion=3.2.7-SNAPSHOT \
   -DprojectName=filevaultsample \
   -DgroupId=sample.filevault \
   -DartifactId=sample.filevault.filevaultsample \
