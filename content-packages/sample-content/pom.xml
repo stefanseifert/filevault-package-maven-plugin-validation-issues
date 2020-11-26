@@ -39,6 +39,13 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/conf,/content,/content/experience-fragments,/content/dam,/content/cq:tags</validRoots>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
         </configuration>
       </plugin>
 

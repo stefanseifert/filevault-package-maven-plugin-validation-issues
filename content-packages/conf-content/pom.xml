@@ -40,6 +40,13 @@
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
           <accessControlHandling>merge</accessControlHandling>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/conf,/conf/filevaultsample/settings</validRoots>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
         </configuration>
       </plugin>
 
