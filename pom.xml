@@ -38,6 +38,7 @@
     <module>content-packages/apps-repository-structure</module>
     <module>content-packages/conf-content</module>
     <module>content-packages/sample-content</module>
+    <module>content-packages/workflow-content</module>
     <module>config-definition</module>
   </modules>
 </project>

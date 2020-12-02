@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/global/settings/workflow/models/dam/dam_update_asset1"/>
+    <filter root="/var/workflow/models/dam/dam_update_asset1"/>
+</workspaceFilter>
