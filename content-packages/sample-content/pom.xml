@@ -45,6 +45,11 @@
                 <validRoots>/conf,/content,/content/experience-fragments,/content/dam,/content/cq:tags</validRoots>
               </options>
             </jackrabbit-filter>
+            <jackrabbit-nodetypes>
+              <options>
+                <validNameSpaces>AnyUnknownNameSpace=http://AnyUnknownNameSpace</validNameSpaces>
+              </options>
+            </jackrabbit-nodetypes>
           </validatorsSettings>
         </configuration>
       </plugin>
