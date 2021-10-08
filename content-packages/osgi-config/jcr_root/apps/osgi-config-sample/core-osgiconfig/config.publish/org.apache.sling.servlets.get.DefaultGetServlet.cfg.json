@@ -1,0 +1,10 @@
+{
+  "enable.html": false,
+  "enable.json": false,
+  "enable.txt": false,
+  "enable.xml": false,
+  "index": false,
+  "index.files": ["index","index.html"],
+  "aliases": "xml:pdf",
+  "json.maximumresults": "100"
+}

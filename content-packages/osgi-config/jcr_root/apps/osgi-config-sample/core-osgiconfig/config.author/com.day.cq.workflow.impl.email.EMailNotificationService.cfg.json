@@ -1,0 +1,5 @@
+{
+  "from.address": "dummy@example.com",
+  "notify.onabort": true,
+  "notify.oncomplete": true
+}

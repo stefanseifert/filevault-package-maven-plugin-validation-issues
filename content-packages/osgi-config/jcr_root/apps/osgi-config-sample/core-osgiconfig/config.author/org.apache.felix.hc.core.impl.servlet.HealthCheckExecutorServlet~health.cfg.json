@@ -1,0 +1,4 @@
+{
+  "Factory PID": "org.apache.felix.hc.core.impl.servlet.HealthCheckExecutorServlet",
+  "servletPath": "/system/health"
+}

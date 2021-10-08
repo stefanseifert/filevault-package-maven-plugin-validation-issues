@@ -31,7 +31,8 @@
     </plugins>
   </build>
 
-<modules>  <module>parent</module>
+  <modules>
+    <module>parent</module>
     <module>bundles/core</module>
     <module>content-packages/ui.apps</module>
     <module>content-packages/complete</module>
@@ -39,6 +40,8 @@
     <module>content-packages/conf-content</module>
     <module>content-packages/sample-content</module>
     <module>content-packages/workflow-content</module>
+    <module>content-packages/osgi-config</module>
     <module>config-definition</module>
   </modules>
+
 </project>

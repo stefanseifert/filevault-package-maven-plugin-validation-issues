@@ -1,0 +1,7 @@
+{
+  "postProcWorkflowsByExpression": [
+    "/content/dam/filevaultsample(-.*)?/(.+)/(.+)/products_upload/.*:/var/workflow/models/filevaultsample/product_asset_upload_post_processing"
+  ],
+  "postProcWorkflowsByPath": [],
+  "runDefaultWorkflow": true
+}

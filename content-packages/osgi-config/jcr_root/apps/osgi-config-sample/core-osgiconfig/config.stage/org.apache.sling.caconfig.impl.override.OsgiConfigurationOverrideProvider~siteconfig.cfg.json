@@ -1,0 +1,7 @@
+{
+  "description": "Author/Publish hostnames for URL externalization",
+  "overrides": [
+    "io.wcm.handler.url.SiteConfig={\"siteUrlAuthor\":\"$[env:FILEVAULTSAMPLE_CMS_AEM_AUTHOR_URL;default=]\",\"siteUrl\":\"$[env:FILEVAULTSAMPLE_CMS_AEM_PUBLISH_URL;default=]\"}"
+  ],
+  "enabled": true
+}

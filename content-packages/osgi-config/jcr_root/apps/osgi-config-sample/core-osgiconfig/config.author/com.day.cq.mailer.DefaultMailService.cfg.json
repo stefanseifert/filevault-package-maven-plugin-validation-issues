@@ -1,0 +1,8 @@
+{
+  "smtp.host": "mail-host",
+  "smtp.port": "465",
+  "smtp.ssl": true,
+  "smtp.user": "$[secret:FILEVAULTSAMPLE_CMS_AEM_EMAIL_SMTP_USER]",
+  "smtp.password": "$[secret:FILEVAULTSAMPLE_CMS_AEM_EMAIL_SMTP_PASSWORD]",
+  "from.address": "dummy@example.com"
+}
