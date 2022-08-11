@@ -30,7 +30,7 @@
     <eclipse.settings.nullanalysis>enabled</eclipse.settings.nullanalysis>
 
     <!-- Versions -->
-    <core.wcm.components.version>2.11.1</core.wcm.components.version>
+    <core.wcm.components.version>2.20.8</core.wcm.components.version>
 
     <!-- Enable reproducible builds -->
     <project.build.outputTimestamp>2021-05-27T00:00:00Z</project.build.outputTimestamp>
