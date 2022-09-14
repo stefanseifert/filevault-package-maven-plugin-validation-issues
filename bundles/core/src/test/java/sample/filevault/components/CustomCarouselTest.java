@@ -4,6 +4,7 @@ import static com.day.cq.commons.DownloadResource.PN_REFERENCE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static sample.filevault.components.CustomCarousel.NN_SLIDES;
 
 import java.util.stream.Collectors;
 
@@ -18,8 +19,6 @@ import com.google.common.collect.ImmutableList;
 
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-
-import static sample.filevault.components.CustomCarousel.NN_SLIDES;
 import sample.filevault.testcontext.AppAemContext;
 
 @ExtendWith(AemContextExtension.class)
@@ -33,7 +32,7 @@ class CustomCarouselTest {
   @BeforeEach
   void setUp() {
     page = context.create().page("/content/mypage");
-    resource = context.create().resource(page.getContentResource().getPath() + "/myresource");
+    resource = context.create().resource(page, "myresource");
     context.currentResource(resource);
   }
 
