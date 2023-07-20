@@ -46,6 +46,7 @@
                   /conf/global/settings/workflow/models/dam,
                   /var/workflow/models/dam
                 </validRoots>
+                <severityForUncoveredAncestorNodes>debug</severityForUncoveredAncestorNodes>
               </options>
             </jackrabbit-filter>
           </validatorsSettings>
