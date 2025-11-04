@@ -54,8 +54,8 @@ class CustomCarouselTest {
 
     CustomCarousel underTest = context.request().adaptTo(CustomCarousel.class);
     assertEquals(ImmutableList.of(
-        "/content/mypage/_jcr_content/myresource/slides/item1.img.png",
-        "/content/mypage/_jcr_content/myresource/slides/item2.img.png"),
+        "/content/mypage/_jcr_content/myresource/slides/item1.coreimg.png",
+        "/content/mypage/_jcr_content/myresource/slides/item2.coreimg.png"),
         underTest.getSlideImages().stream()
             .map(Image::getSrc)
             .collect(Collectors.toList()));

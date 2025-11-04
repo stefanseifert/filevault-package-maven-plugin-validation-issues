@@ -18,6 +18,7 @@ import com.adobe.cq.wcm.core.components.models.Image;
 
 /**
  * Model for the custom carousel component.
+ *
  * <p>
  * Please note: There is already is a pre-built "Carousel" Core Component which does basically the same
  * as this component with a much more sophisticated edit mode support. Use it, instead of this demo component!
